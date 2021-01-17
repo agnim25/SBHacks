@@ -1,0 +1,5 @@
+version: "Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
+options: "7ed4b3def3b0ad87865286e1d21ec808"
+build_time: [1610832423, 952126000]
+inputs:
+  "/Users/agnimagarwal/Documents/Projects/ucsb/at_demos/at_hello_world/server_demo_complete/ios/Runner/AppDelegate.swift": [1610816929, 815680491]

@@ -1,0 +1,39 @@
+name: newserverdemo
+description: A new Flutter application.
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  path_provider: ^1.5.1
+  photo_manager: ^0.5.8
+  googleapis: any
+  googleapis_auth: any
+  url_launcher_web: any
+  process_run: any
+  grpc: any
+  fl_chart: ^0.12.2
+  health: ^3.0.1+1
+  # at_demo_data: ^0.0.2
+  at_client_mobile: ^1.0.0
+  cupertino_icons: ^0.1.3
+  modal_progress_hud: any
+
+  at_demo_data:
+    git:
+      url: https://github.com/atsign-foundation/at_demos.git
+      path: at_demo_data
+      ref: master
+
+#dev_dependencies:
+#  flutter_test:
+#    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - pink_health.png
