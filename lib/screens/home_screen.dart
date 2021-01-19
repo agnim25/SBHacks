@@ -13,16 +13,6 @@ import 'package:newserverdemo/screens/pie_chart.dart';
 import 'dart:io';
 import 'dart:math' as math;
 
-final _credentials = new ServiceAccountCredentials.fromJson(r'''
-{
-  "private_key_id": "6ada20d3bc52e6f5a3ede237c4db1239d6ad3263",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDBB1LgUekReSQU\n1vKpiUahOs2MXGf3ddYI62xtw2RHXh7DqBnY8XbzunB4R6Gvb0B5GvaSo+xhutCM\n255//r/gBg2CAajw5KzD9MsACB5MknYnWjIC2T76rvfbjXhnxl3UZUZFjs+VwXQ4\nFHSELkF3VGY6QfRsm2jW4ci6LM0Hhxn5ggqLUhoNZMPKlHPu9ApwJGyUTxYwYUPl\nVHmibgJBkEMLDWJA+IatjYK94lu0VE7qwZ7Yrf3H9zM8if0gIR1+8zvag6nQIkdp\nCkzNlLA7HzJfPLnNIYApao0+ksFSto2m4PFj5YIACm2j2BtWdJVvNdwMKBAWbsSq\nkEtTyDRxAgMBAAECggEAEDpjJZBFWa53UdgzXPz5RudIbh87r2KE/Ml8G2tEpDpd\nuEHK8IH2Z+259GbDSVo/T58scS4eWqYHz/vLwsOCUp13p8EneJ8lBjFvmqBUGchr\nbgoHb9VfVdh9ZoQphgH3k/pysrjbq2Gw+WEA3bb80oEyOf4fBD15ji07wKkxEIuN\nu4nysmfcu1jXoVrFCIKki/G635ZVuuwVnXt0oDRfWwikLd+M0OmKgd6GzjJz7Joo\nM8iNIWePce3F3csKULwEYjI6S7eiowk4thpFJPw1YPSNZqRIbbkpKG0TtURnleCA\nX//PxdwxvDSzi7WN/bXVoK/w9dY3BQmNaBlYezoKhQKBgQD822rGQqJnmTIY9xhL\nPXFF76aY6XR94OlRHEXVeMXoD9RvtucaP7PTPKqS/Tc0vBOMHFb+4EOE6DL4ULD3\nRCf4ZEPLSZ3V9E6q/oL11TxhRDMWjdREc9XKsu+IEt5ALDYgTE1OBEEXs7wv4DSm\nMEbuEmlDVPTcOz+po+2JRszHLQKBgQDDbYjMyaRRoHBfDxQcLoviITTCrpiaRe3S\n0NAwmgElYnZFoJIXDs6wPTrEUoz4BCfF3TEMrD4PeRuaFhNOSE9IMnsZc0Tl1/QZ\ntkam0RE28ncNNTyv2HYH1nxQn1W6BQ5KXfixwe+6OxgQsv0KbzEKnkYsBooJgUZL\nEsYusI3s1QKBgByprrfcs9Y0inZEBE/7Hg0Edokc5aSjSy9zmgLx1tVQfg9P13Cl\nSfgnB1r0Mz7aFwkp6T6pI148iBKX6weMhU9l5j10Ed0//W7qvOOrEVYhSf1DhI1h\n6Bk7IWX2ZZU2rcgJfjXay5opOKrgqncwP8oa8i28wqj4WmYbfAC0st/dAoGAIYFS\nBuo7RdNf8KxBImPIj8hpp0cP2sNKdu5eAzckIyiyZlWVNmbPgN++h5IvoQX1W7ME\nicuuCDEXTl+ih7VWAmbFPCPLGCziKNZbXpZRgT4osxcBhJR0B/v57EilBfN/87gQ\nv0kktKUVByfowjU2Dz/7f+jPGboUNyLM34xdiNECgYEA48TfhkSdXOviKUr8d390\nSthMhDpc2M+9gYNkiDCYE9L9v/hajAPD+LOSwrEbqlw7MoWzOSIDM6EFj03y5e3k\neQws4IqKSyc5OGerqHH7Kr18wlPtwo9fba2KnzidkVVx+3LfHh4yOzUx0Bpxy0D2\nTkdtNBFqNUXJRnCer2jgoas=\n-----END PRIVATE KEY-----\n",
-  "client_email": "starting-account-21ts164xd4u2@yhack-1604779291300.iam.gserviceaccount.com",
-  "client_id": "108014620653507281755",
-  "type": "service_account"
-}
-''');
-
 const _SCOPES = const [StorageApi.DevstorageReadOnlyScope];
 
 void main() {
@@ -373,8 +363,7 @@ class MyApp extends StatelessWidget {
         var url = 'https://vision.googleapis.com/v1/images:annotate';
         var response = await http.post(url,
             headers: {
-              "Authorization": "Bearer ya29.c.Kp0B7gcCYkTFKvHmeJQINYZ2FM02XMOy3fuUWSREqyr-Qqih5yI1d4ZOhrkKYZFN4lezgJ8RXlF7CAsU_RqQRT7dZMS3eE6RNp51Fb6Ouf3OvD-ttkaCC336DrX_pHJYhvYrGdTzBs43fX8soL78gtgDp4DN5uWlUg5ol0j5sDhRec1SzlXfEu6Xb56bpQwhIqofiMw8sJgso5SYvVa9qA",
-              "Content-Type": "application/json; charset=utf-8"
+              "Authorization": "Bearer AUTH_CODE_HERE", "Content-Type": "application/json; charset=utf-8"
             },
             body: json.encode({"requests": [
               {
